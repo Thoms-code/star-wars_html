@@ -1,5 +1,120 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url('../assets/background.png');
     background-size: cover;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 
+#intro {
+    position: absolute;
+    margin: 0;
+    color: #01F4FD;
+    font-family: Arial, sans-serif;
+    font-size: 4.5em;
+    opacity: 0;
+    animation: intro_opacity 4s;
+}
+
+.logo {
+    position: absolute;
+    margin: 0;
+    height: 210vh;
+    opacity: 0;
+    animation: star-wars_logo 13s 6000ms;
+}
+
+@keyframes intro_opacity {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 100%;
+    }
+    90% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes star-wars_logo {
+    0% {
+        opacity: 100%;
+    }
+    90% {
+        transform: scale(0.02);
+        opacity: 90%;
+    }
+    100% {
+        transform: scale(0.02);
+        opacity: 0;
+    }
+}
+
+#board {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    transform: perspective(300px) rotateX(25deg);
+    transform-origin: 50% 90%;
+    text-align: justify;
+    position: absolute;
+    margin-left: -9em;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 450%;
+    height: 50em;
+    width: 18em;
+    bottom: 0;
+    left: 50%;
+}
+
+#board:after {
+    position: absolute;
+    content: ' ';
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+p, h1,h2 {
+    color: #efd91d;
+}
+article {
+    animation: scroll 170s linear 13.5s;
+    position: absolute;
+    top: 100%;
+}
+
+h1, h2 {
+    text-align: center;
+}
+h2 {
+    text-transform: uppercase;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -170%;
+    }
+}
+
+#finito {
+    width: 80%;
+    opacity: 0;
+    animation: fini_anim 50s 58s ;
+}
+
+@keyframes fini_anim {
+    0% {
+        opacity: 100%;
+    }
+    
+}
